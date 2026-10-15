@@ -1,0 +1,12 @@
+psycopg[binary]>=3.2
+python-dotenv>=1.0
+openai>=1.50
+pgvector>=0.3
+pymupdf>=1.24
+tiktoken>=0.8
+google-api-python-client>=2.140
+google-auth>=2.30
+streamlit>=1.38
+openpyxl>=3.1
+python-pptx>=1.0
+notion-client>=2.2

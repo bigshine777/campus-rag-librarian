@@ -1,0 +1,14 @@
+.env
+data/
+secrets/
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.DS_Store
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+.playwright-mcp/
