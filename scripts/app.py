@@ -1,5 +1,4 @@
-"""AI Librarianのチャット画面
-共有パスワードでログインしてから質問できる
+"""AI Librarianのチャット画面。共有パスワードでログインしてから質問できる
 使い方: streamlit run scripts/app.py
 """
 

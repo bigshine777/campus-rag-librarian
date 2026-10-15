@@ -28,15 +28,12 @@ resource "oci_core_instance" "this" {
   }
 
   # source_details: data.oci_core_images.ubuntuは「最新のイメージ」を都度
-  # 取得するため、Oracle側で新しいイメージが公開されると、次回plan/apply時に
-  # source_details（ForceNew属性）が変わったと判定され、稼働中のインスタンスが
-  # 削除→再作成されてしまう（実際に発生した）。
+  # 取得するため、新しいイメージが公開されるとForceNew属性が変わったと
+  # 判定され、稼働中のインスタンスが削除→再作成されてしまう
   # metadata（user_data）: cloud-initは初回起動時にしか実行されないため、
-  # 作成後にこのファイルのuser_dataを更新（iptables設定の追記など）しても
-  # 稼働中のインスタンスには反映されない。それ自体は「ドキュメントとして
-  # 残す」目的なら問題ないが、metadataもForceNew属性のため、放置すると
-  # 次回plan/apply時に不要なインスタンス再作成を引き起こす。
-  # 一度作成したインスタンスはここでは追従させない。
+  # 更新してもインスタンスには反映されない。同じくForceNew属性のため、
+  # 放置すると不要な再作成を引き起こす
+  # 一度作成したインスタンスはここでは追従させない
   lifecycle {
     ignore_changes = [source_details, metadata]
   }

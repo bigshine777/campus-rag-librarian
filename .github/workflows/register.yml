@@ -3,7 +3,7 @@ name: Register Drive PDFs
 on:
   # GitHub Actions純正のscheduleトリガーは、個人アカウント・低頻度リポジトリだと
   # 大きく間引かれて実質1時間おきに実行されなかったため、Oracle Cloud VM上の
-  # systemdタイマーからworkflow_dispatchを叩く方式に変更した。
+  # systemdタイマーからworkflow_dispatchを叩く方式に変更した
   workflow_dispatch: {}
 
 jobs:

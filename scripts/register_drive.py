@@ -1,4 +1,4 @@
-"""Google Driveのinboxフォルダにある未登録のPDF・画像・Excel・PowerPointをSupabaseに登録する
+"""Google Driveの指定フォルダにある未登録のPDF・画像・Excel・PowerPointをSupabaseに登録する
 GitHub Actionsから定期実行される想定
 使い方: python scripts/register_drive.py
 """

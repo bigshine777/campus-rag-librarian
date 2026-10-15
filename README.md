@@ -17,7 +17,7 @@ Google Driveの指定フォルダやNotionデータベースに資料を置い�
 
 ```mermaid
 flowchart LR
-    A[Google Drive<br/>inboxフォルダ] -->|register_drive.py| B[GitHub Actions]
+    A[Google Drive<br/>指定フォルダ] -->|register_drive.py| B[GitHub Actions]
     N[Notion<br/>バックログDB] -->|register_notion.py| B
     B -->|gpt-5.4-miniでMarkdown化<br/>registration.py| C[チャンク分割]
     C -->|text-embedding-3-small| D[(Supabase<br/>pgvector)]

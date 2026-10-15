@@ -43,7 +43,7 @@ resource "oci_core_security_list" "this" {
 
   # 8501（Streamlitの平文HTTP）は、nginx+Let's EncryptでHTTPS化した後は
   # 外部に公開しない（nginxがローカルの127.0.0.1:8501にプロキシするので、
-  # 外部からの8501直接アクセスを許可する必要はない）。
+  # 外部からの8501直接アクセスを許可する必要はない）
 
   ingress_security_rules {
     source   = "0.0.0.0/0"
